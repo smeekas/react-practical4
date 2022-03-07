@@ -1,0 +1,25 @@
+.todoInput {
+  width: 95%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  margin: 0.7rem 0.5rem;
+  border-bottom: 2px solid #ccc;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

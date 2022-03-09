@@ -1,35 +1,15 @@
-import { FiCheck, FiCircle } from "react-icons/fi";
-import "./TodoItem.css";
+import { FiCheck } from "react-icons/fi";
 import { IconContext } from "react-icons";
-import styled from "styled-components";
-function TodoItem() {
-  const TodoItemDiv = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.7rem 0.5rem;
-  `;
-  const IconCheckDiv = styled.div`
-    border: 2px solid #cbccd0;
-    border-radius: 50%;
-    width: 1.2rem;
-    height: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover .checks {
-      color: #5be5ab;
-    }
-    &:hover {
-      border-color: #5be5ab;
-    }
-  `;
+import TodoItemDiv from "../../styled/todoItem";
+import IconCheckDiv from "../../styled/iconCheck";
+function TodoItem(props) {
   return (
-    <IconContext.Provider value={{ className: "checks" }}>
+    <IconContext.Provider
+      value={{ className: props.isCompleted ? "completed" : "checks" }}
+    >
       <TodoItemDiv>
-        <p>begin QA for product</p>
-        <IconCheckDiv>
+        <p>{props.value}</p>
+        <IconCheckDiv className={props.isCompleted ? "completed" : ""}>
           <FiCheck />
         </IconCheckDiv>
       </TodoItemDiv>

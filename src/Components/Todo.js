@@ -1,22 +1,24 @@
 import TodoList from "./TodoList/TodoList";
 import TodoDate from "./TodoDate/TodoDate";
 import AddButton from "./AddButton/AddButton.js";
-import styled from "styled-components";
+import { useState } from "react";
+import TodoDiv from "../styled/todo";
 function Todo() {
-  const TodoDiv = styled.div`
-    background-color: white;
-    width: 15rem;
-    margin: 4rem auto;
-    padding: 3rem 2rem;
-    position: relative;
-    border-radius: 2px;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
-  `;
+  const DUMMY_DATA = [
+    { id: 1, value: "begin QA for the product", complete: false },
+    { id: 2, value: "learn React advance", complete: true },
+  ];
+  const [list, setList] = useState(DUMMY_DATA);
+  const [showInputBox, setShowInputBox] = useState(false);
+  const btnClickhandler = () => {
+    setShowInputBox(true);
+  };
+
   return (
     <TodoDiv>
       <TodoDate />
-      <TodoList />
-      <AddButton />
+      <TodoList list={list} showInputBox={showInputBox} />
+      {!showInputBox && <AddButton onClick={btnClickhandler} />}
     </TodoDiv>
   );
 }

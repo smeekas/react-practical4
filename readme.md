@@ -38,4 +38,4 @@
 ```
 
 ## App preview
-![screenshot](./public/images/screenshot.png)
+![screenshot](./public/images/todo_snap.png)

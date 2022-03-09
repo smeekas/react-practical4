@@ -9,7 +9,7 @@ function TodoItem(props) {
     >
       <TodoItemDiv>
         <p>{props.value}</p>
-        <IconCheckDiv className={props.isCompleted ? "completed" : ""}>
+        <IconCheckDiv completed={props.isCompleted} >
           <FiCheck />
         </IconCheckDiv>
       </TodoItemDiv>

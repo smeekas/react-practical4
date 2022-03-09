@@ -9,16 +9,12 @@ function Todo() {
     { id: 2, value: "learn React advance", complete: true },
   ];
   const [list, setList] = useState(DUMMY_DATA);
-  const [showInputBox, setShowInputBox] = useState(false);
-  const btnClickhandler = () => {
-    setShowInputBox(true);
-  };
 
   return (
     <TodoDiv>
       <TodoDate />
-      <TodoList list={list} showInputBox={showInputBox} />
-      {!showInputBox && <AddButton onClick={btnClickhandler} />}
+      <TodoList list={list} />
+      <AddButton />
     </TodoDiv>
   );
 }

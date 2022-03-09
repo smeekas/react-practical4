@@ -4,7 +4,7 @@ function AddButton(props) {
 
   return (
     <AddButtonDiv  onClick={props.onClick} >
-      <FiPlus className="icon" />
+      <FiPlus />
     </AddButtonDiv>
   );
 }

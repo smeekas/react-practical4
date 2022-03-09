@@ -2,7 +2,7 @@ import TodoItem from "../TodoItem/TodoItem";
 import TodoListDiv from "../../styled/todoList";
 function TodoList(props) {
   return (
-    <TodoListDiv className="todoList">
+    <TodoListDiv >
       {props.list.map((todoItem) => {
         return (
           <TodoItem

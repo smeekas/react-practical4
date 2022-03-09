@@ -38,3 +38,4 @@
 ```
 
 ## App preview
+![screenshot](./public/images/screenshot.png)
